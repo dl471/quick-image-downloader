@@ -1,0 +1,24 @@
+{
+
+  "manifest_version": 2,
+  "name": "Image Downloader",
+  "version": "0.1",
+
+  "description": "Downloads images from Discord and places them in folder according to server and channel",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.cdn.discordapp.com/*"],
+      "js": ["image_downloader.js"]
+    }
+  ],
+  
+  "permissions" : [
+    "downloads"
+]
+
+}
