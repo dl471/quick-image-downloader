@@ -10,15 +10,13 @@
     "48": "icons/border-48.png"
   },
 
-  "content_scripts": [
-    {
-      "matches": ["*://*.cdn.discordapp.com/*"],
-      "js": ["image_downloader.js"]
-    }
-  ],
+  "background": {
+    "scripts": ["image_downloader.js"]
+  },
   
   "permissions" : [
-    "downloads"
+    "downloads",
+    "tabs"
 ]
 
 }
