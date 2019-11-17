@@ -1,0 +1,9 @@
+{
+    "files": [
+        "discord.ts",
+        "main.ts",
+    ],
+    "compilerOptions": {
+        "outFile": "../image_downloader.js",
+    }
+}

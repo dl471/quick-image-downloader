@@ -7,9 +7,13 @@ const FILENAME_PIECE = EXPECTED_LINK_PIECES - 1;
 const CHANNELID_PIECE = EXPECTED_LINK_PIECES - 3;
 
 class DiscordLinkParts {
+
+    fileName: string
+    channelID: string
+
     constructor(link) {
-        var pieces = link.split("/");
-        var numPieces = pieces.length;
+        let pieces : string[] = link.split("/");
+        let numPieces : number = pieces.length;
         if (numPieces == EXPECTED_LINK_PIECES) {
             console.log("Got expected number of link pieces");
         }
@@ -23,21 +27,21 @@ class DiscordLinkParts {
     }
 }
 
-function isValidDiscordAttachment(link) {
+function isValidDiscordAttachment(link) : boolean {    
     return DISCORD_LINK_REGEX.test(link);
 }
 
-function isDiscordLink() {
-    if (isValidDiscordAttachment(url)) {
-        console.log("Detected Discord attachment in " + url)
+function isDiscordLink(link) : boolean {
+    if (isValidDiscordAttachment(link)) {
+        console.log("Detected Discord attachment in " + link)
         return true;
     }
     else {
-        console.log("Could not detect Discord attachment in " + url);
+        console.log("Could not detect Discord attachment in " + link);
         return false;
     }
 }
 
 function processDiscordLink(link) {
-    var linkParts = new DiscordLinkParts(url);
+    var linkParts = new DiscordLinkParts(link);
 }
