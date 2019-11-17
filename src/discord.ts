@@ -11,7 +11,7 @@ class DiscordLinkParts {
     fileName: string
     channelID: string
 
-    constructor(link) {
+    constructor(link: string) {
         let pieces : string[] = link.split("/");
         let numPieces : number = pieces.length;
         if (numPieces == EXPECTED_LINK_PIECES) {
@@ -27,11 +27,11 @@ class DiscordLinkParts {
     }
 }
 
-function isValidDiscordAttachment(link) : boolean {    
+function isValidDiscordAttachment(link: string) : boolean {    
     return DISCORD_LINK_REGEX.test(link);
 }
 
-function isDiscordLink(link) : boolean {
+function isDiscordLink(link: string) : boolean {
     if (isValidDiscordAttachment(link)) {
         console.log("Detected Discord attachment in " + link)
         return true;
@@ -42,6 +42,6 @@ function isDiscordLink(link) : boolean {
     }
 }
 
-function processDiscordLink(link) {
+function processDiscordLink(link: string) {
     var linkParts = new DiscordLinkParts(link);
 }
