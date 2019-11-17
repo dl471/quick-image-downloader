@@ -1,0 +1,7 @@
+{
+  "name": "image_downloader",
+  "version": "0.1",
+  "devDependencies": {
+    "web-ext-types": "^3.2.1"
+  }
+}
