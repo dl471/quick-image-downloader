@@ -45,4 +45,5 @@ function isDiscordLink(link: string) : boolean {
 
 function processDiscordLink(link: string) {
     var linkParts = new DiscordLinkParts(link);
+    return linkParts;
 }
