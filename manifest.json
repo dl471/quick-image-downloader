@@ -16,7 +16,9 @@
   
   "permissions" : [
     "downloads",
-    "tabs"
+    "tabs",
+    "contextMenus",
+    "menus"
 ]
 
 }
