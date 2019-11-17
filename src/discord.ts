@@ -14,6 +14,7 @@ class DiscordLinkParts {
     constructor(link: string) {
         let pieces : string[] = link.split("/");
         let numPieces : number = pieces.length;
+        console.log(`Examining URL ${link}`)
         if (numPieces == EXPECTED_LINK_PIECES) {
             console.log("Got expected number of link pieces");
         }
